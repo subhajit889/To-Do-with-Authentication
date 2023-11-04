@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# To-Do App with Authentication
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This To-Do App with Firebase Authentication is a web application built using ReactJS, Context, CSS, and Firebase. It provides users with a convenient way to manage their tasks and to-do lists. After signing up as a new user or logging in, users can add, modify, delete, and mark tasks as complete. The app also timestamps tasks when they are added and when they are completed. Completed tasks are moved to the bottom of the list for better organization.
 
-## Available Scripts
+## Features
+User Authentication: Users can sign up and log in to the app using Firebase Authentication.
 
-In the project directory, you can run:
+Add To-Do Items: Users can add new to-do items with a title and optional description.
 
-### `npm start`
+Edit To-Do Items: Users have the ability to modify the title and description of their to-do items.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Delete To-Do Items: Users can delete tasks they no longer need.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Mark Tasks as Complete: Users can mark tasks as complete, and they will be timestamped with the completion date.
 
-### `npm test`
+Task Organization: Completed tasks are moved to the bottom of the list for better task management.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
+ReactJS: The frontend is built using the popular React library, providing a dynamic user interface.
 
-### `npm run build`
+Context: Context is used for state management, allowing global access to user data and to-do lists.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+CSS: Custom CSS styles are applied for an interactive and visually appealing user interface.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Firebase Authentication: Firebase Authentication is used for user sign-up and login functionality.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Installation
+To run the app locally, follow these steps:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository:
+git clone https://github.com/subhajit889/To-Do-with-Authentication.git
+2. Change the directory to the project folder:
+cd to-do-app-with-firebase-auth
+3. Install dependencies:
+npm install
+4. Start the development server:
+npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
+Sign up as a new user or log in using your credentials.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Add new to-do items by providing a title and, optionally, a description.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Modify existing to-do items by clicking the "Modify" button.
 
-## Learn More
+Delete tasks you no longer need using the "Delete" button.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Mark tasks as complete, and they will be timestamped with the completion date.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Completed tasks are moved to the bottom of the list for better organization.
