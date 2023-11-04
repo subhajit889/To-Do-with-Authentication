@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, Navigate } from 'react-router-dom'; // Import Redirect
 import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import TodoApp from '../Components/ToDo/TodoPage';
+import "../Styles/home.css"
 
 const Home = () => {
     const [showLoginBox, setShowLoginBox] = useState(false);

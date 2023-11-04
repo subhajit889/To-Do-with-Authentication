@@ -1,0 +1,30 @@
+/* CSS for the MainForm component */
+.main-form {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .todo-input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .add-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Hover effect for the add button */
+  .add-button:hover {
+    background-color: #0056b3;
+  }
+  

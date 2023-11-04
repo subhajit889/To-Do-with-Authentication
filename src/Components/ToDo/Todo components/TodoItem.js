@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useValue } from '../Context/context';
+import "../Todostyles/todoitem.css"
 
 const TodoItem = ({ todo, index }) => {
   const { removeTodo, todos, setTodos } = useValue();
@@ -24,59 +25,62 @@ const TodoItem = ({ todo, index }) => {
   };
 
   return (
-    <div>
-      <div >
-        <div>{todo.text}</div>
-        <div>
-          {isEditing ? (
-            <div>
-                <input
-                type="text"
-                value={editedText}
-                onChange={(e) => setEditedText(e.target.value)}
-              />
-              <button onClick={handleSave}>
-                Save
+    <div className="todo-grid">
+    <div className="todo-item">
+      <div className="todo-text">
+        {todo.text}
+      </div>
+      <div className="todo-actions">
+        {isEditing ? (
+          <div className="edit-mode">
+            <input
+              type="text"
+              value={editedText}
+              onChange={(e) => setEditedText(e.target.value)}
+              className="edit-input"
+            />
+            <button onClick={handleSave} className="save-button">
+              Save
+            </button>
+            <button onClick={handleCancel} className="cancel-button">
+              Cancel
+            </button>
+          </div>
+        ) : (
+          <>
+            {!todo.completed && (
+              <button onClick={handleEdit} className="edit-button">
+                Modify
               </button>
-              <button onClick={handleCancel}>
-                Cancel
-              </button>
-            </div>
-          ) : (
-            <>
-              {!todo.completed && (
-                <button onClick={handleEdit} >
-                  Modify
-                </button>
-              )}
-              <button onClick={() => removeTodo(index)} >
-                Delete
-              </button>
-            </>
-          )}
-        </div>
-        <div>
-          <span>
-            {todo.dateAdded && `Added on : ${todo.dateAdded}`}{' '}
-          </span>
-          <span>
-            {todo.completed && todo.dateCompleted && `Completed: ${todo.dateCompleted}`}
-          </span>
-        </div>
-        
-        {!todo.completed && (
-          <button
-            onClick={() => {
-              const updatedTodos = [...todos];
-              updatedTodos[index].completed = true;
-              updatedTodos[index].dateCompleted = new Date().toLocaleString();
-              setTodos(updatedTodos);
-            }}
-          >
-            Mark as Complete
-          </button>
+            )}
+            <button onClick={() => removeTodo(index)} className="delete-button">
+              Delete
+            </button>
+          </>
         )}
       </div>
+      <div className="todo-details">
+        <span>
+          {todo.dateAdded && `Added on : ${todo.dateAdded}`}{' '}
+        </span>
+        <span>
+          {todo.completed && todo.dateCompleted && `Completed: ${todo.dateCompleted}`}
+        </span>
+      </div>
+      {!todo.completed && (
+        <button
+          onClick={() => {
+            const updatedTodos = [...todos];
+            updatedTodos[index].completed = true;
+            updatedTodos[index].dateCompleted = new Date().toLocaleString();
+            setTodos(updatedTodos);
+          }}
+          className="mark-complete-button"
+        >
+          Mark as Complete
+        </button>
+      )}
+    </div>
     </div>
   );
 };

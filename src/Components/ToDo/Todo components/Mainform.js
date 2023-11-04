@@ -1,13 +1,14 @@
 import React from 'react';
 import { useValue } from '../Context/context';
-
+import '../Todostyles/mainform.css'
 
 const MainForm = () => {
   const { todoText, setTodoText, addTodo } = useValue();
-  
+
   return (
-    <div>
+    <div className="main-form">
       <input
+        className="todo-input"
         type="text"
         placeholder="Add a new todo..."
         value={todoText}
@@ -16,7 +17,7 @@ const MainForm = () => {
           if (e.key === 'Enter') addTodo();
         }}
       />
-      <button onClick={addTodo}>
+      <button className="add-button" onClick={addTodo}>
         Add To-Do
       </button>
     </div>
