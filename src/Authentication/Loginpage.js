@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../Firebase/firebase';
 import { Link } from 'react-router-dom';
+import "../Styles/loginpage.css"
 
 const Loginpage = () => {
 
